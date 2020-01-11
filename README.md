@@ -2,8 +2,8 @@
 
 ## Key Differences to Laravel Core Setup
 * Adds Authentication
-* Uses App\Model for User model
-* Refactors Home to Admin for logged in user panel
+* Refactors `App\User` to `App\Model\User`
+* Refactors `Home` to `Admin` e.g. for logged in view
 
 ## Project Setup
 
