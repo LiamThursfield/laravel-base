@@ -11,10 +11,20 @@
 |
 */
 
+Auth::routes();
+
+// To disable registration
+/*
+Auth::routes([
+    'register' => false,
+    'reset' => false,
+    'verify' => false
+]);
+*/
+
+
 Route::get('/', function () {
     return view('welcome');
 });
-
-Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
