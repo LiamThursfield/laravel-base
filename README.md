@@ -15,7 +15,6 @@
 ### Set up .env
 * `cp .env.example .env`
 * `php artisan key:generate`
-* Update App Name
 
 ### Migrations
 * `php artisan migrate`
