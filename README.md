@@ -1,4 +1,9 @@
-# App Readme
+# Readme
+
+## Key Differences to Laravel Core Setup
+* Adds Authentication
+* Uses App\Model for User model
+* Refactors Home to Admin for logged in user panel
 
 ## Project Setup
 
@@ -14,9 +19,3 @@
 
 ### Migrations
 * `php artisan migrate`
-
-
-## Key Differences to Laravel Core Setup
-* Adds Authentication
-* Uses App\Model for User model
-* Refactors Home to Admin for logged in user panel
