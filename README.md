@@ -5,4 +5,4 @@
 * `php artisan key:generate`
 * `php artisan migrate`
 * `yarn`
-* 
+* `yarn dev`
