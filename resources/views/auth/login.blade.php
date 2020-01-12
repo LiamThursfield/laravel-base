@@ -64,17 +64,19 @@
                     <div class="md:w-32"></div>
 
                     <div class="md:ml-6">
-                        <input
-                            id="remember"
-                            class="cursor-pointer"
-                            {{ old('remember') ? 'checked' : '' }}
-                            name="remember"
-                            type="checkbox"
-                        >
+                        <div class="flex items-center">
+                            <input
+                                id="remember"
+                                class="cursor-pointer"
+                                {{ old('remember') ? 'checked' : '' }}
+                                name="remember"
+                                type="checkbox"
+                            >
 
-                        <label class="ml-2 cursor-pointer text-gray-700" for="remember">
-                            {{ __('Remember Me') }}
-                        </label>
+                            <label class="ml-2 cursor-pointer text-gray-700" for="remember">
+                                {{ __('Remember Me') }}
+                            </label>
+                        </div>
 
                         <div class="flex items-center mt-6">
                             <button
