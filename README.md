@@ -49,26 +49,26 @@
 
 ## Screenshots
 
-**Login Screen - Desktop**
+### Login Screen - Desktop
 
 ![Login Screen - Desktop](/readme/login_desktop.png?raw=true "Login Screen - Desktop")
 
 
-**Login Screen - Mobile**
+### Login Screen - Mobile
 
 ![Login Screen - Mobile](/readme/login_mobile.png?raw=true "Login Screen - Mobile")
 
 
-**Admin Dashboard - Desktop**
+### Admin Dashboard - Desktop
 
 ![Dashboard - Desktop](/readme/dashboard_desktop.png?raw=true "Dashboard - Desktop")
 
 
-**Admin Dashboard - Mobile**
+### Admin Dashboard - Mobile
 
 ![Dashboard - Mobile](/readme/dashboard_mobile.png?raw=true "Dashboard - Mobile")
 
 
-**Navigation Mobile**
+## Navigation Mobile
 
 ![Navigation - Mobile](/readme/navigation_mobile.png?raw=true "Navigation - Mobile")
