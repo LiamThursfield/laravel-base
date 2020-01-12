@@ -1,6 +1,7 @@
+# Laravel Base App
+
 ![Header Image](/readme/header.png?raw=true)
 
-# Laravel Base App
 
 ## Key Differences to Laravel Core Setup
 
@@ -48,12 +49,17 @@
 
 ## Screenshots
 
+**Login Screen - Desktop**
 ![Login Screen - Desktop](/readme/login_desktop.png?raw=true "Login Screen - Desktop")
 
+**Login Screen - Mobile**
 ![Login Screen - Mobile](/readme/login_mobile.png?raw=true "Login Screen - Mobile")
 
+**Admin Dashboard - Desktop**
 ![Dashboard - Desktop](/readme/dashboard_desktop.png?raw=true "Dashboard - Desktop")
 
+**Admin Dashboard - Mobile**
 ![Dashboard - Mobile](/readme/dashboard_mobile.png?raw=true "Dashboard - Mobile")
 
-![Navigation - Mobile](/readme/navigation_mobile.pnpg?raw=true "Navigation - Mobile")
+**Navigation Mobile**
+![Navigation - Mobile](/readme/navigation_mobile.png?raw=true "Navigation - Mobile")
