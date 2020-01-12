@@ -20,7 +20,7 @@ Auth::routes([
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('home');
 
 Route::get('/admin', 'AdminController@index')->name('admin');
 Route::get('/admin/about', 'AdminController@about')->name('admin.about');

@@ -10,6 +10,7 @@
     <title>{{ config('app.name', 'LaravelBaseApp') }}</title>
 
     <!-- Scripts -->
+    @include('layouts.partials.head.routes-script')
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->

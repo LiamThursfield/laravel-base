@@ -10,6 +10,7 @@
     <title>{{ config('app.name', 'LaravelBaseApp') }}</title>
 
     <!-- Scripts -->
+    @include('layouts.partials.head.routes-script')
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
@@ -22,57 +23,7 @@
 <body class="bg-gray-100">
     <div id="app">
 
-        <!-- Navbar -->
-        <nav class="bg-white py-4 shadow-md w-full">
-            <div class="container flex items-center mx-auto px-4">
-
-                <!-- Logo -->
-                <a
-                    class="mr-16 text-xl"
-                    href="{{ url('/') }}"
-                >
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-
-                <!-- Navigation -->
-                <div class="flex flex-1 justify-between mr-8 text-gray-700">
-                    <!-- Left Navigation -->
-                    <div>
-                        @auth
-                            <a class="mr-4 hover:text-gray-900" href="/admin">
-                                Dashboard
-                            </a>
-                            <a class="hover:text-gray-900" href="/admin/about">
-                                About
-                            </a>
-                        @endauth
-                    </div>
-                    <!-- Right Navigation -->
-                    <div class="border-l border-gray-500 pl-6">
-                        @guest
-                            <a class="mr-4 hover:text-gray-900" href="{{ route('login') }}">
-                                {{ __('Login') }}
-                            </a>
-
-                            <a class="hover:text-gray-900" href="{{ route('register') }}">
-                                {{ __('Register') }}
-                            </a>
-                        @else
-                            <div class="flex flex-row">
-                                <p class="mr-2">{{ Auth::user()->name }}</p>
-                                <form class="inline-block" action="{{ route('logout') }}" method="POST">
-                                    @csrf
-                                    <button class="text-xs text-gray-500 hover:text-gray-900" type="submit">
-                                        ({{ __('Logout') }})
-                                    </button>
-                                </form>
-                            </div>
-                        @endguest
-                    </div>
-                </div>
-
-            </div>
-        </nav>
+        <header-main></header-main>
 
         <main>
             @yield('content')

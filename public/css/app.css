@@ -595,6 +595,13 @@ html {
   background: #e2e8f0; /* Gecko Browsers */
 }
 
+.mobile-nav-scroll-lock {
+  overflow: hidden;
+  @media (min-width: 768px) {
+    overflow: auto;
+  }
+}
+
 .container{
   width: 100%;
 }
@@ -8739,6 +8746,76 @@ html {
 .z-auto{
   z-index: auto;
 }
+
+/** Custom Includes **/
+
+/*! purgecss start ignore */
+
+/**************
+ * Slide Down *
+ **************/
+
+.slide-down-enter-active {
+  transition: all .3s ease;
+}
+
+.slide-down-leave-active {
+  transition: all .2s ease;
+}
+
+.slide-down-enter, .slide-down-leave-to {
+  transform: translateY(-100%);
+}
+
+/************
+ * Slide Up *
+ ************/
+
+.slide-up-enter-active {
+  transition: all .3s ease;
+}
+
+.slide-up-leave-active {
+  transition: all .2s ease;
+}
+
+.slide-up-enter, .slide-up-leave-to {
+  transform: translateY(100%);
+}
+
+/**************
+ * Slide Left *
+ **************/
+
+.slide-left-enter-active {
+  transition: all .3s ease;
+}
+
+.slide-left-leave-active {
+  transition: all .2s ease;
+}
+
+.slide-left-enter, .slide-left-leave-to {
+  transform: translateX(-100%);
+}
+
+/***************
+ * Slide Right *
+ ***************/
+
+.slide-right-enter-active {
+  transition: all .3s ease;
+}
+
+.slide-right-leave-active {
+  transition: all .2s ease;
+}
+
+.slide-right-enter, .slide-right-leave-to {
+  transform: translateX(100%);
+}
+
+/*! purgecss end ignore */
 
 @media (min-width: 640px){
   .sm\:sr-only{

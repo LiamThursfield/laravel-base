@@ -8,7 +8,7 @@
         <div class="bg-white border-gray-800 border-t-4 p-6 rounded-b-lg rounded-t shadow-lg">
             <h1 class="text-center text-lg">{{ __('Register') }}</h1>
 
-            <form class="mt-6" action="{{ route('password.confirm') }}" method="POST" >
+            <form class="mt-6" action="{{ route('register') }}" method="POST" >
                 @csrf
 
                 <!-- Name Input -->

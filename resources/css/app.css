@@ -6,3 +6,6 @@
 @import "tailwindcss/components";
 
 @import "tailwindcss/utilities";
+
+/** Custom Includes **/
+@import "./includes/transitions.css";
