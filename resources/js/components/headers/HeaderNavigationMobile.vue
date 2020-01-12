@@ -13,7 +13,7 @@
                 <ul class="flex-1">
                     <li
                         v-for="(navigation_link, key) in navigation_links"
-                        v-if="navigation_link.url"
+                        v-if="showLink(navigation_link)"
                         :key="'header-link-mobile-' + key"
                         @click="linkSelected"
                     >
@@ -98,6 +98,18 @@
         methods: {
             linkSelected() {
                 this.$emit('link-selected', true);
+            },
+            showLink(navigation_link) {
+                if (!navigation_link.url) {
+                    return false;
+                }
+
+                if (!navigation_link.require_auth) {
+                    return true;
+                }
+
+                // Only show the link if the user is authenticated
+                return user.isAuthenticated();
             }
         }
     }

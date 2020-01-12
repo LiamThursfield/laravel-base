@@ -77,11 +77,13 @@
                 this.navigation_links = {
                     dashboard: {
                         label: "Dashboard",
-                        url: route('admin')
+                        url: route('admin'),
+                        require_auth: true
                     },
                     about: {
                         label: "About",
-                        url: route('admin.about')
+                        url: route('admin.about'),
+                        require_auth: true
                     },
                 };
             },

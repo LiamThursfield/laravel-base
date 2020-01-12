@@ -13,7 +13,7 @@
         >
             <li
                 v-for="(navigation_link, key) in navigation_links"
-                v-if="navigation_link.url"
+                v-if="showLink(navigation_link)"
                 :key="'header-link-desktop-' + key"
                 class="
                     mx-3
@@ -88,6 +88,18 @@
             isLastLink(index) {
                 let length = Object.keys(this.navigation_links).length;
                 return index === length - 1;
+            },
+            showLink(navigation_link) {
+                if (!navigation_link.url) {
+                    return false;
+                }
+
+                if (!navigation_link.require_auth) {
+                    return true;
+                }
+
+                // Only show the link if the user is authenticated
+                return user.isAuthenticated();
             }
         }
     }
