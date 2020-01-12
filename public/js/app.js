@@ -2090,11 +2090,13 @@ __webpack_require__.r(__webpack_exports__);
       this.navigation_links = {
         dashboard: {
           label: "Dashboard",
-          url: route('admin')
+          url: route('admin'),
+          require_auth: true
         },
         about: {
           label: "About",
-          url: route('admin.about')
+          url: route('admin.about'),
+          require_auth: true
         }
       };
     },
@@ -2209,6 +2211,18 @@ __webpack_require__.r(__webpack_exports__);
     isLastLink: function isLastLink(index) {
       var length = Object.keys(this.navigation_links).length;
       return index === length - 1;
+    },
+    showLink: function showLink(navigation_link) {
+      if (!navigation_link.url) {
+        return false;
+      }
+
+      if (!navigation_link.require_auth) {
+        return true;
+      } // Only show the link if the user is authenticated
+
+
+      return user.isAuthenticated();
     }
   }
 });
@@ -2323,6 +2337,18 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     linkSelected: function linkSelected() {
       this.$emit('link-selected', true);
+    },
+    showLink: function showLink(navigation_link) {
+      if (!navigation_link.url) {
+        return false;
+      }
+
+      if (!navigation_link.require_auth) {
+        return true;
+      } // Only show the link if the user is authenticated
+
+
+      return user.isAuthenticated();
     }
   }
 });
@@ -20117,7 +20143,7 @@ var render = function() {
             "\n            flex flex-1 flex-row items-center text-gray-700\n            md:-mx-3\n        "
         },
         _vm._l(_vm.navigation_links, function(navigation_link, key) {
-          return navigation_link.url
+          return _vm.showLink(navigation_link)
             ? _c(
                 "li",
                 {
@@ -20252,7 +20278,7 @@ var render = function() {
             "ul",
             { staticClass: "flex-1" },
             _vm._l(_vm.navigation_links, function(navigation_link, key) {
-              return navigation_link.url
+              return _vm.showLink(navigation_link)
                 ? _c(
                     "li",
                     {
