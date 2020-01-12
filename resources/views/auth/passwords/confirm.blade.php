@@ -15,16 +15,16 @@
             <form class="mt-8" action="{{ route('password.confirm') }}" method="POST" >
                 @csrf
 
-                <div class="flex items-center mt-4 text-sm">
-                    <label class="text-gray-700 text-right w-32" for="password">
+                <div class="input-group mt-4 text-sm">
+                    <label class="text-gray-700 md:text-right md:w-32" for="password">
                         {{ __('Password') }}
                     </label>
 
                     <input
                         id="password"
                         class="
-                            border border-gray-400 ml-6 py-2 px-3 rounded flex-1
-                            @error('password') border-red-600 @enderror
+                            flex-1 mt-1 md:ml-6 md:mt-0
+                            @error('password') error @enderror
                         "
                         autocomplete="current-password"
                         autofocus
@@ -35,10 +35,10 @@
                 </div>
 
                 @error('password')
-                    <div class="flex items-center mt-2 text-xs">
-                        <div class="w-32"></div>
+                    <div class="input-group mt-2 text-xs">
+                        <div class="md:w-32"></div>
 
-                        <div class="ml-6">
+                        <div class="md:ml-6">
                             <p class="text-red-600">
                                 {{ $message }}
                             </p>
@@ -46,10 +46,10 @@
                     </div>
                 @enderror
 
-                <div class="flex items-center mt-6 text-sm">
-                    <div class="w-32"></div>
+                <div class="input-group mt-6 text-sm">
+                    <div class="md:w-32"></div>
 
-                    <div class="ml-6">
+                    <div class="md:ml-6">
                         <div class="flex items-center">
                             <button
                                 class="bg-gray-800 px-6 py-2 rounded text-white"

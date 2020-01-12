@@ -1,0 +1,25 @@
+input {
+    &[type=email],
+    &[type=number],
+    &[type=password],
+    &[type=tel],
+    &[type=text],
+    &[type=url]
+    {
+        @apply border border-gray-400 py-2 px-3 rounded;
+
+        &.error {
+            @apply border-red-600;
+        }
+    }
+}
+
+.input-group {
+    @apply flex flex-col;
+}
+
+@screen md {
+    .input-group {
+        @apply flex-row items-center
+    }
+}
