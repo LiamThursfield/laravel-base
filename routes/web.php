@@ -11,20 +11,15 @@
 |
 */
 
-Auth::routes();
-
-// To disable registration
-/*
 Auth::routes([
-    'register' => false,
-    'reset' => false,
-    'verify' => false
+    'register'  => true,
+    'reset'     => true,
+    'verify'    => false
 ]);
-*/
-
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 Route::get('/admin', 'AdminController@index')->name('admin');
+Route::get('/admin/about', 'AdminController@about')->name('admin.about');

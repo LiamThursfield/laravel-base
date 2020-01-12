@@ -1,23 +1,31 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Dashboard</div>
+<div class="container flex mt-8 mx-auto px-4">
 
-                    <div class="card-body">
-                        @if (session('status'))
-                            <div class="alert alert-success" role="alert">
-                                {{ session('status') }}
-                            </div>
-                        @endif
+    <div class="max-w-3xl mx-auto w-full">
 
-                        You are logged in!
-                    </div>
-                </div>
-            </div>
+        <div>
+            <h1 class="text-2xl">
+                Dashboard
+            </h1>
         </div>
+
+        @if (session('status'))
+            <div class="bg-white border-green-600 border-l-4 mt-8 p-6 rounded-l rounded-r-lg shadow-lg">
+                <p>
+                    {{ session('status') }}
+                </p>
+            </div>
+        @endif
+
+        <div class="bg-white border-gray-800 border-l-4 mt-8 p-6 rounded-l rounded-r-lg shadow-lg">
+            <p>
+                You are logged in!
+            </p>
+        </div>
+
     </div>
+
+</div>
 @endsection

@@ -25,4 +25,15 @@ class AdminController extends Controller
     {
         return view('admin.index');
     }
+
+
+    /**
+     * Show the about page.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function about()
+    {
+        return view('admin.about');
+    }
 }
