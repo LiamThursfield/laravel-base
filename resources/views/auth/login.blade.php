@@ -12,58 +12,42 @@
             <form class="mt-6" action="{{ route('login') }}" method="POST">
                 @csrf
 
-                <div class="input-group text-sm">
-                    <label class="text-gray-700 md:text-right md:w-32" for="email">
-                        {{ __('E-Mail Address') }}
-                    </label>
+                <!-- Email Input -->
+                <two-col-input-group
+                    class="text-sm"
+                    @error('email')
+                        error_class="text-red-600"
+                        error_message="{{ $message }}"
+                    @enderror
+                    label_class="text-gray-700 md:w-32"
+                    label_text="{{ __('E-Mail Address') }}"
+                    input_autocomplete="email"
+                    :input_autofocus="true"
+                    input_id="email"
+                    input_name="email"
+                    :input_required="true"
+                    input_type="email"
+                    input_value="{{ old('email') }}"
+                ></two-col-input-group>
 
-                    <input
-                        id="email"
-                        class="
-                            flex-1 mt-1 md:ml-6 md:mt-0
-                            @error('email') error @enderror
-                        "
-                        autocomplete="email"
-                        autofocus
-                        name="email"
-                        required
-                        type="email"
-                        value="{{ old('email') }}"
-                    >
-                </div>
+                <!-- Password Input -->
+                <two-col-input-group
+                    class="mt-4 text-sm"
+                    label_class="text-gray-700 md:w-32"
+                    label_text="{{ __('Password') }}"
+                    input_autocomplete="current-password"
+                    input_id="password"
+                    input_name="password"
+                    :input_required="true"
+                    input_type="password"
+                ></two-col-input-group>
 
-                @error('email')
-                    <div class="flex items-center mt-2 text-xs">
-                        <div class="md:w-32"></div>
-
-                        <div class="md:ml-6">
-                            <p class="text-red-600">
-                                {{ $message }}
-                            </p>
-                        </div>
-                    </div>
-                @enderror
-
-
-                <div class="input-group mt-4 text-sm">
-                    <label class="text-gray-700 md:text-right md:w-32" for="password">
-                        {{ __('Password') }}
-                    </label>
-
-                    <input
-                        id="password"
-                        class="flex-1 mt-1 md:ml-6 md:mt-0"
-                        autocomplete="current-password"
-                        name="password"
-                        required
-                        type="password"
-                    >
-                </div>
-
+                <!-- Remember Input and Submit Button -->
                 <div class="flex items-center mt-4 text-sm">
                     <div class="md:w-32"></div>
 
                     <div class="md:ml-6">
+                        <!-- Remember Input -->
                         <div class="flex items-center">
                             <input
                                 id="remember"
@@ -78,6 +62,7 @@
                             </label>
                         </div>
 
+                        <!-- Submit Button -->
                         <div class="flex items-center mt-6">
                             <button
                                 class="bg-gray-800 px-6 py-2 rounded text-white"

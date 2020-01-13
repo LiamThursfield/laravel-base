@@ -15,36 +15,22 @@
             <form class="mt-8" action="{{ route('password.confirm') }}" method="POST" >
                 @csrf
 
-                <div class="input-group mt-4 text-sm">
-                    <label class="text-gray-700 md:text-right md:w-32" for="password">
-                        {{ __('Password') }}
-                    </label>
-
-                    <input
-                        id="password"
-                        class="
-                            flex-1 mt-1 md:ml-6 md:mt-0
-                            @error('password') error @enderror
-                        "
-                        autocomplete="current-password"
-                        autofocus
-                        name="password"
-                        required
-                        type="password"
-                    >
-                </div>
-
-                @error('password')
-                    <div class="input-group mt-2 text-xs">
-                        <div class="md:w-32"></div>
-
-                        <div class="md:ml-6">
-                            <p class="text-red-600">
-                                {{ $message }}
-                            </p>
-                        </div>
-                    </div>
-                @enderror
+                <!-- Password Input -->
+                <two-col-input-group
+                    class="mt-4 text-sm"
+                    @error('password')
+                        error_class="text-red-600"
+                        error_message="{{ $message }}"
+                    @enderror
+                    label_class="text-gray-700 md:w-32"
+                    label_text="{{ __('Password') }}"
+                    input_autocomplete="current-password"
+                    :input_autofocus="true"
+                    input_id="password"
+                    input_name="password"
+                    :input_required="true"
+                    input_type="password"
+                ></two-col-input-group>
 
                 <div class="input-group mt-6 text-sm">
                     <div class="md:w-32"></div>

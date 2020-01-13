@@ -3,7 +3,7 @@
         <nav
             v-show="is_visible"
             class="
-                absolute bg-gray-200 inset-0 mt-16 z-10 w-full
+                absolute bg-gray-200 inset-0 mt-16 z-30 w-full
                 md:hidden
             "
         >

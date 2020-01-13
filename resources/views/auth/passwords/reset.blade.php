@@ -14,84 +14,50 @@
                 <input type="hidden" name="token" value="{{ $token }}">
 
                 <!-- Email Input -->
-                <div class="input-group mt-4 text-sm">
-                    <label class="text-gray-700 md:text-right md:w-32" for="email">
-                        {{ __('E-Mail Address') }}
-                    </label>
-
-                    <input
-                        id="email"
-                        class="
-                            flex-1 mt-1 md:ml-6 md:mt-0
-                            @error('email') error @enderror
-                        "
-                        autocomplete="email"
-                        autofocus
-                        name="email"
-                        required
-                        type="email"
-                        value="{{ $email ?? old('email') }}"
-                    >
-                </div>
-
-                @error('email')
-                    <div class="flex items-center mt-2 text-xs">
-                        <div class="md:w-32"></div>
-
-                        <div class="md:ml-6">
-                            <p class="text-red-600">
-                                {{ $message }}
-                            </p>
-                        </div>
-                    </div>
-                @enderror
+                <two-col-input-group
+                    class="mt-4 text-sm"
+                    @error('email')
+                        error_class="text-red-600"
+                        error_message="{{ $message }}"
+                    @enderror
+                    label_class="text-gray-700 md:w-32"
+                    label_text="{{ __('E-Mail Address') }}"
+                    input_autocomplete="email"
+                    :input_autofocus="true"
+                    input_id="email"
+                    input_name="email"
+                    :input_required="true"
+                    input_type="email"
+                    input_value="{{ old('email') }}"
+                ></two-col-input-group>
 
                 <!-- Password Input -->
-                <div class="input-group mt-4 text-sm">
-                    <label class="text-gray-700 md:text-right md:w-32" for="password">
-                        {{ __('Password') }}
-                    </label>
-
-                    <input
-                        id="password"
-                        class="
-                            flex-1 mt-1 md:ml-6 md:mt-0
-                            @error('password') error @enderror
-                        "
-                        autocomplete="new-password"
-                        name="password"
-                        required
-                        type="password"
-                    >
-                </div>
-
-                @error('password')
-                    <div class="flex items-center mt-2 text-xs">
-                        <div class="md:w-32"></div>
-
-                        <div class="md:ml-6">
-                            <p class="text-red-600">
-                                {{ $message }}
-                            </p>
-                        </div>
-                    </div>
-                @enderror
+                <two-col-input-group
+                    class="mt-4 text-sm"
+                    @error('password')
+                        error_class="text-red-600"
+                        error_message="{{ $message }}"
+                    @enderror
+                    label_class="text-gray-700 md:w-32"
+                    label_text="{{ __('Password') }}"
+                    input_autocomplete="new-password"
+                    input_id="password"
+                    input_name="password"
+                    :input_required="true"
+                    input_type="password"
+                ></two-col-input-group>
 
                 <!-- Password Confirmation Input -->
-                <div class="input-group mt-4 text-sm">
-                    <label class="text-gray-700 md:text-right md:w-32" for="password-confirm">
-                        {{ __('Confirm Password') }}
-                    </label>
-
-                <input
-                    id="password-confirm"
-                    class="flex-1 mt-1 md:ml-6 md:mt-0"
-                    autocomplete="new-password"
-                    name="password_confirmation"
-                    required
-                    type="password"
-                >
-                </div>
+                <two-col-input-group
+                    class="mt-4 text-sm"
+                    label_class="text-gray-700 md:w-32"
+                    label_text="{{ __('Confirm Password') }}"
+                    input_autocomplete="new-password"
+                    input_id="password-confirm"
+                    input_name="password_confirmation"
+                    :input_required="true"
+                    input_type="password"
+                ></two-col-input-group>
 
                 <!-- Submit -->
                 <div class="flex items-center mt-4 text-sm">

@@ -7,6 +7,7 @@ Vue.component('hamburger-button', require('./components/buttons/HamburgerButton'
 
 // Forms
 Vue.component('csrf-input', require('./components/forms/CsrfInput').default);
+Vue.component('two-col-input-group', require('./components/forms/TwoColInputGroup').default);
 
 // Headers
 Vue.component('header-main', require('./components/headers/HeaderMain.vue').default);

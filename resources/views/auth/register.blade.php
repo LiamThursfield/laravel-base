@@ -12,118 +12,69 @@
                 @csrf
 
                 <!-- Name Input -->
-                <div class="input-group text-sm">
-                    <label class="text-gray-700 md:text-right md:w-32" for="name">
-                        {{ __('Name') }}
-                    </label>
-
-                    <input
-                        id="name"
-                        class="
-                            flex-1 mt-1 md:ml-6 md:mt-0
-                            @error('name') error @enderror
-                        "
-                        autocomplete="name"
-                        autofocus
-                        name="name"
-                        required
-                        type="text"
-                        value="{{ old('name') }}"
-                    >
-                </div>
-
-                @error('name')
-                    <div class="flex items-center mt-2 text-xs">
-                        <div class="md:w-32"></div>
-
-                        <div class="md:ml-6">
-                            <p class="text-red-600">
-                                {{ $message }}
-                            </p>
-                        </div>
-                    </div>
-                @enderror
+                <two-col-input-group
+                    class="text-sm"
+                    @error('name')
+                        error_class="text-red-600"
+                        error_message="{{ $message }}"
+                    @enderror
+                    label_class="text-gray-700 md:w-32"
+                    label_text="{{ __('Name') }}"
+                    input_autocomplete="name"
+                    :input_autofocus="true"
+                    input_id="name"
+                    input_name="name"
+                    :input_required="true"
+                    input_type="text"
+                    input_value="{{ old('name') }}"
+                ></two-col-input-group>
 
                 <!-- Email Input -->
-                <div class="input-group mt-4 text-sm">
-                    <label class="text-gray-700 md:text-right md:w-32" for="email">
-                        {{ __('E-Mail Address') }}
-                    </label>
-
-                    <input
-                        id="email"
-                        class="
-                            flex-1 mt-1 md:ml-6 md:mt-0
-                            @error('email') error @enderror
-                        "
-                        autocomplete="email"
-                        name="email"
-                        required
-                        type="email"
-                        value="{{ old('email') }}"
-                    >
-                </div>
-
-                @error('email')
-                    <div class="flex items-center mt-2 text-xs">
-                        <div class="md:w-32"></div>
-
-                        <div class="md:ml-6">
-                            <p class="text-red-600">
-                                {{ $message }}
-                            </p>
-                        </div>
-                    </div>
-                @enderror
+                <two-col-input-group
+                    class="mt-4 text-sm"
+                    @error('email')
+                        error_class="text-red-600"
+                        error_message="{{ $message }}"
+                    @enderror
+                    label_class="text-gray-700 md:w-32"
+                    label_text="{{ __('E-Mail Address') }}"
+                    input_autocomplete="email"
+                    input_id="email"
+                    input_name="email"
+                    :input_required="true"
+                    input_type="email"
+                    input_value="{{ old('email') }}"
+                ></two-col-input-group>
 
                 <!-- Password Input -->
-                <div class="input-group mt-4 text-sm">
-                    <label class="text-gray-700 md:text-right md:w-32" for="password">
-                        {{ __('Password') }}
-                    </label>
-
-                    <input
-                        id="password"
-                        class="
-                            flex-1 mt-1 md:ml-6 md:mt-0
-                            @error('password') error @enderror
-                        "
-                        autocomplete="new-password"
-                        name="password"
-                        required
-                        type="password"
-                    >
-                </div>
-
-                @error('password')
-                    <div class="flex items-center mt-2 text-xs">
-                        <div class="md:w-32"></div>
-
-                        <div class="md:ml-6">
-                            <p class="text-red-600">
-                                {{ $message }}
-                            </p>
-                        </div>
-                    </div>
-                @enderror
+                <two-col-input-group
+                    class="mt-4 text-sm"
+                    @error('password')
+                        error_class="text-red-600"
+                        error_message="{{ $message }}"
+                    @enderror
+                    label_class="text-gray-700 md:w-32"
+                    label_text="{{ __('Password') }}"
+                    input_autocomplete="new-password"
+                    input_id="password"
+                    input_name="password"
+                    :input_required="true"
+                    input_type="password"
+                ></two-col-input-group>
 
                 <!-- Password Confirmation Input -->
-                <div class="input-group mt-4 text-sm">
-                    <label class="text-gray-700 md:text-right md:w-32" for="password-confirm">
-                        {{ __('Confirm Password') }}
-                    </label>
+                <two-col-input-group
+                    class="mt-4 text-sm"
+                    label_class="text-gray-700 md:w-32"
+                    label_text="{{ __('Confirm Password') }}"
+                    input_autocomplete="new-password"
+                    input_id="password-confirm"
+                    input_name="password_confirmation"
+                    :input_required="true"
+                    input_type="password"
+                ></two-col-input-group>
 
-                    <input
-                        id="password-confirm"
-                        class="flex-1 mt-1 md:ml-6 md:mt-0"
-                        autocomplete="new-password"
-                        name="password_confirmation"
-                        required
-                        type="password"
-                    >
-                </div>
-
-                <!-- Submit -->
+                <!-- Submit Button -->
                 <div class="flex items-center mt-4 text-sm">
                     <div class="md:w-32"></div>
 
