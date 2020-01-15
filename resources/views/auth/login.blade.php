@@ -48,19 +48,13 @@
 
                     <div class="md:ml-6">
                         <!-- Remember Input -->
-                        <div class="flex items-center">
-                            <input
-                                id="remember"
-                                class="cursor-pointer"
-                                {{ old('remember') ? 'checked' : '' }}
-                                name="remember"
-                                type="checkbox"
-                            >
-
-                            <label class="ml-2 cursor-pointer text-gray-700" for="remember">
-                                {{ __('Remember Me') }}
-                            </label>
-                        </div>
+                        <checkbox-input
+                            label_class="text-gray-700"
+                            label_text="{{ __('Remember Me') }}"
+                            :input_checked="{{ old('remember') ? 'true' : 'false' }}"
+                            input_id="remember"
+                            input_name="remember"
+                        ></checkbox-input>
 
                         <!-- Submit Button -->
                         <div class="flex items-center mt-6">
