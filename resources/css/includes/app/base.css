@@ -1,0 +1,12 @@
+html {
+    @apply bg-gray-900;
+    @apply font-sans-app;
+    @apply text-gray-100;
+}
+
+::selection {
+    background: theme('colors.gray.500'); /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+    background: theme('colors.gray.500'); /* Gecko Browsers */
+}

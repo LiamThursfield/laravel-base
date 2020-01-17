@@ -1,0 +1,7 @@
+.mobile-nav-scroll-lock {
+    @apply overflow-hidden;
+
+    @screen md {
+        @apply overflow-auto;
+    }
+}

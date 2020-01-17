@@ -11,7 +11,8 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
   theme: {
     fontFamily: {
-      'sans': ['Poppins', ...defaultTheme.fontFamily.sans]
+      'sans-admin': ['Poppins', ...defaultTheme.fontFamily.sans],
+      'sans-app': ['Montserrat', ...defaultTheme.fontFamily.sans]
     },
     extend: {
       colors: {

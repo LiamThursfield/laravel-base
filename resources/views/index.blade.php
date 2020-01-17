@@ -1,8 +1,8 @@
-@extends('layouts.default')
+@extends('layouts.app')
 
 @section('content')
 
-<div class="bg-gray-100 flex flex-wrap h-100 items-center justify-center min-h-screen w-100">
+<div class="flex flex-wrap h-100 items-center justify-center min-h-screen w-100">
     <div>
         <h1 class="px-4 text-4xl md:text-6xl">
             {{ config('app.name', 'Laravel') }}
@@ -12,8 +12,8 @@
             @auth
                 <a
                     class="
-                        bg-gray-900 mx-2 px-6 py-1 rounded text-white
-                        hover:bg-gray-700
+                        bg-gray-700 mx-2 px-6 py-1 rounded text-white
+                        hover:bg-gray-800
                     "
                     href="{{ url('/admin') }}"
                 >
@@ -22,8 +22,8 @@
             @else
                 <a
                     class="
-                        bg-gray-900 mx-2 px-6 py-1 rounded text-white
-                        hover:bg-gray-700
+                        bg-gray-700 mx-2 px-6 py-1 rounded text-white
+                        hover:bg-gray-800
                     "
                     href="{{ route('login') }}"
                 >
@@ -33,8 +33,8 @@
                 @if (Route::has('register'))
                     <a
                         class="
-                            bg-gray-900 mx-2 px-6 py-1 rounded text-white
-                            hover:bg-gray-700
+                            bg-gray-700 mx-2 px-6 py-1 rounded text-white
+                            hover:bg-gray-800
                         "
                         href="{{ route('register') }}"
                     >

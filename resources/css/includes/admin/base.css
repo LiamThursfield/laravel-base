@@ -1,5 +1,5 @@
 html {
-    @apply font-sans;
+    @apply font-sans-admin;
     @apply text-gray-900;
 }
 
@@ -8,12 +8,4 @@ html {
 }
 ::-moz-selection {
     background: theme('colors.gray.300'); /* Gecko Browsers */
-}
-
-.mobile-nav-scroll-lock {
-    @apply overflow-hidden;
-
-    @screen md {
-        @apply overflow-auto;
-    }
 }
