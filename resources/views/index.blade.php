@@ -4,9 +4,9 @@
 
 <div class="flex flex-wrap h-100 items-center justify-center min-h-screen w-100">
     <div>
-        <h1 class="px-4 text-4xl md:text-6xl">
+        <header-example>
             {{ config('app.name', 'Laravel') }}
-        </h1>
+        </header-example>
 
         <div class="flex justify-center mt-6 -mx-2 text-lg md:text-xl">
             @auth

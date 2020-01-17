@@ -18,7 +18,7 @@ Vue.prototype.laravel = laravel;
 Vue.prototype.user = user;
 
 require('./components_core');
-require('./components_app');
+require('./components_admin');
 
 const app = new Vue({
     el: '#app',
