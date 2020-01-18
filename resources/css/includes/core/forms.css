@@ -6,14 +6,16 @@ input {
     &[type=text],
     &[type=url]
     {
-        @apply appearance-none border border-gray-400 outline-none py-2 px-3 rounded text-gray-700;
+        &:not(.appearance-none) {
+            @apply appearance-none border border-gray-400 outline-none py-2 px-3 rounded text-gray-700;
 
-        &:focus {
-            @apply outline-none shadow-outline;
-        }
+            &:focus {
+                @apply outline-none shadow-outline;
+            }
 
-        &.error {
-            @apply border-red-600;
+            &.error {
+                @apply border-red-600;
+            }
         }
     }
 }
