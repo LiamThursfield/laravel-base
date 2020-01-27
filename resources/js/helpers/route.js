@@ -6,7 +6,7 @@
 
 let routes = window.Laravel.routes;
 
-module.exports = function (name, default_route = undefined) {
+module.exports = function (name, route_args = [], default_route = undefined) {
 
     if (routes[name] === undefined) {
         console.error('Route not found ', name);
@@ -19,7 +19,7 @@ module.exports = function (name, default_route = undefined) {
     } else {
         return window.Laravel.baseUrl + '/' + routes[name]
             .split('/')
-            .map(s => s[0] == '{' ? args.shift() : s)
+            .map(s => s[0] == '{' ? route_args.shift() : s)
             .join('/');
     }
 };
